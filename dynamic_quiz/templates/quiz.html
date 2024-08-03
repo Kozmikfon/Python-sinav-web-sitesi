@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Quiz</title>
+    <style>
+        /* Soruları mavi renkte göstermek için stil */
+        label {
+            color: blue;  /* Mavi rengi belirtir */
+            font-weight: bold;  /* Metni kalın yapar */
+        }
+    </style>
+</head>
+<body>
+    <h1>Quiz</h1>
+    <form action="{{ url_for('quiz') }}" method="POST">
+        <label>What is your name?</label><br>
+        <input type="text" name="name" required><br>
+        
+        <label>What is your favorite color?</label><br>
+        <input type="radio" name="color" value="Red"> Red<br>
+        <input type="radio" name="color" value="Blue"> Blue<br>
+        <input type="radio" name="color" value="Green"> Green<br>
+        
+        <label>What is your favorite animal?</label><br>
+        <input type="radio" name="animal" value="Dog"> Dog<br>
+        <input type="radio" name="animal" value="Cat"> Cat<br>
+        <input type="radio" name="animal" value="Parrot"> Parrot<br>
+        
+        <label>What is your favorite season?</label><br>
+        <input type="radio" name="season" value="Spring"> Spring<br>
+        <input type="radio" name="season" value="Summer"> Summer<br>
+        <input type="radio" name="season" value="Fall"> Fall<br>
+        <input type="radio" name="season" value="Winter"> Winter<br>
+        
+        <label>What is your favorite food?</label><br>
+        <input type="radio" name="food" value="Pizza"> Pizza<br>
+        <input type="radio" name="food" value="Pasta"> Pasta<br>
+        <input type="radio" name="food" value="Sushi"> Sushi<br>
+        <input type="radio" name="food" value="Steak"> Steak<br>
+        
+        <label>What sport do you like?</label><br>
+        <input type="radio" name="sport" value="Football"> Football<br>
+        <input type="radio" name="sport" value="Basketball"> Basketball<br>
+        <input type="radio" name="sport" value="Tennis"> Tennis<br>
+        <input type="radio" name="sport" value="Swimming"> Swimming<br>
+
+        <label>Where did you hear about Coding?</label><br>
+        <input type="radio" name="source" value="LinkedIn"> LinkedIn<br>
+        <input type="radio" name="source" value="Friends"> Friends<br>
+        <input type="radio" name="source" value="Other"> Other<br>
+
+        <label>Do you enjoy teaching children?</label><br>
+        <input type="radio" name="teaching" value="Yes"> Yes<br>
+        <input type="radio" name="teaching" value="No"> No<br>
+        <input type="radio" name="teaching" value="Somewhat"> Somewhat<br>
+
+        <label>Describe your hobbies or interests:</label><br>
+        <textarea name="hobbies"></textarea><br>
+        <input type="submit" value="Submit Answers">
+    </form>
+    <footer>
+        <p>Here information about author: [Mahmut Bağlama]</p>
+        <a href="{{ url_for('index') }}">Back to Home</a>
+    </footer>
+</body>
+</html>

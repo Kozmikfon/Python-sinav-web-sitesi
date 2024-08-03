@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Quiz</title>
+</head>
+<body>
+    <h1>Welcome to the Quiz</h1>
+    <a href="{{ url_for('quiz') }}">Start Quiz</a>
+    <h2>High Scores</h2>
+    <ul>
+        {% for user in users %}
+            <li>{{ user.name }}: {{ user.score }}</li>
+        {% endfor %}
+    </ul>
+    <footer>
+        <p>Here information about author: [Mahmut Bağlama]</p>
+    </footer>
+</body>
+</html>
